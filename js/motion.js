@@ -81,7 +81,7 @@ document.getElementById("grid")&&document.getElementById("grid").addEventListene
 },true);
 
 if(fine&&!rm){
-  var mags=[].slice.call(document.querySelectorAll(".go,.ct-b,.res .btn,.op-btn,.bg-cta"));
+  var mags=[].slice.call(document.querySelectorAll(".go,.ct-b,.nx-card"));
   mags.forEach(function(el){el.classList.add("mg")});
   document.addEventListener("mousemove",function(e){
     if(document.documentElement.classList.contains("hm-pre"))return;
