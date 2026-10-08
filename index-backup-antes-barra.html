@@ -385,42 +385,5 @@
 <div id="sp" aria-hidden="true"></div>
 <div id="vx" aria-hidden="true"></div>
 <script src="js/motion.js"></script>
-
-<!-- BARRA-GRANDE-DIRECT-START -->
-<script>
-(function () {
-
-  function irParaBarraGrande() {
-    window.location.href = "barra-grande.html";
-  }
-
-  /* Captura o clique ANTES do sistema antigo de cases */
-  document.addEventListener("click", function (e) {
-    const card = e.target.closest('[data-case="barra"]');
-
-    if (!card) return;
-
-    e.preventDefault();
-    e.stopPropagation();
-    e.stopImmediatePropagation();
-
-    irParaBarraGrande();
-  }, true);
-
-  /* Segurança caso algum script ainda tente colocar #barra */
-  function corrigirRotaBarra() {
-    if (window.location.hash === "#barra") {
-      window.location.replace("barra-grande.html");
-    }
-  }
-
-  window.addEventListener("hashchange", corrigirRotaBarra);
-
-  corrigirRotaBarra();
-
-})();
-</script>
-<!-- BARRA-GRANDE-DIRECT-END -->
-
 </body>
 </html>
